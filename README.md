@@ -17,3 +17,5 @@ STATICFILES_DIRS =[
     '/var/www/static',
 ]
 ```
+
+<img src="formulario/documents/img/load_static_dir.png" alt="">
