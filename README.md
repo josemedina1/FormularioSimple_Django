@@ -2,7 +2,10 @@
 Creacion de un formulario simple en conjunto a bases de datos 
 para guardar la informacion del formulario
 
-
+# Iniciar servidor Django
+```
+py manage.py runserver
+```
 
 # Configuracion STATIC
 
