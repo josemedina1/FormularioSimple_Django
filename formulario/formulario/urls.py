@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Vista inicial al correr el servidor
     path('', views.index, name='index'),
 ]

@@ -6,7 +6,6 @@ def index(request):
         formulario = TuFormulario(request.POST)
         if formulario.is_valid():
             valor_input = formulario.cleaned_data['tu_input']
-            # Realiza la lógica que desees con el valor_input
             return render(request, 'index.html', {'valor_input': valor_input})
     else:
         formulario = TuFormulario()
