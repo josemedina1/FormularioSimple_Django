@@ -11,5 +11,3 @@ def index(request):
         formulario = TuFormulario()
 
     return render(request, 'index.html', {'formulario': formulario})
-
-
