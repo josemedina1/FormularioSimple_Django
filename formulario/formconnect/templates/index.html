@@ -1,0 +1,39 @@
+{# Herencia de template base pata navbar y gooter #}
+{% extends './layouts/base.html' %}
+
+{# Carga de static para este template #}
+{% load static %}
+{# Hoja de estilos para este template #}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{# Contenido de formulario #}
+{% block content %}
+
+  <h2>Formulario de Persona</h2>
+  <div class="container-fluid">
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div class="overflow-auto">
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Lastname</th>
+          <th>city</th>
+          <th>country</th>
+        </thead>
+        {% for i in person %}
+          <tr>
+            <td>{{i.name}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+  
+    </div>
+  </div>
+{% endblock%}

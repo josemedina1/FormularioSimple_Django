@@ -1,0 +1,23 @@
+h1{
+    color: red;
+}
+
+.btn{
+    border: 1px solid rebeccapurple;
+    background-color: aqua;
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    margin-top: 5%;
+}
+
+.overflow-auto{
+    border: 2px solid red;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
