@@ -5,45 +5,65 @@
 {% load static %}
 {# Hoja de estilos para este template #}
 {% block style %}
-  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
 {% endblock %}
 
 {# Contenido de formulario #}
 {% block content %}
-
+  <!-- Contenedor form y tabla -->
   <div class="container-fluid data">
-    <form method="post" action="{% url 'index' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Send</button>
+    <!-- Formulario -->
+    <form method="POST" action="{% url 'index' %}" novalidate>
+      {% csrf_token %}
+      <div class="flex">
+        <!-- Name / Nombre -->
+        <label>
+          {{ form.name }}
+          <span>{{ form.name.label }}</span>
+        </label>
+        <!-- Lastname / Apellido -->
+        <label>
+          {{ form.lastname }}
+          <span>{{ form.lastname.label }}</span>
+        </label>
+      </div>
+      <!-- City / Ciudad -->
+      <label>
+        {{ form.city }}
+        <span>{{ form.city.label }}</span>
+      </label>
+      <!-- Country / Pais -->
+      <label>
+        {{ form.country }}
+        <span>{{ form.country.label }}</span>
+      </label>
+      <button class="submit" type="submit">Send</button>
     </form>
 
+    <!-- Contenedor tabla -->
     <div class="overflow-auto">
-
-      
-<div class="table-container">
-    <table>
-        <thead>
+      <div class="table-container">
+        <table>
+          <thead>
             <tr>
-                <th>Name</th>
-                <th>Lastname</th>
-                <th>City</th>
-                <th>Country</th>
+              <th>Name</th>
+              <th>Lastname</th>
+              <th>City</th>
+              <th>Country</th>
             </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
             {% for i in person %}
-                <tr>
-                    <td>{{ i.name }}</td>
-                    <td>{{ i.lastname }}</td>
-                    <td>{{ i.city }}</td>
-                    <td>{{ i.country }}</td>
-                </tr>
+              <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.lastname }}</td>
+                <td>{{ i.city }}</td>
+                <td>{{ i.country }}</td>
+              </tr>
             {% endfor %}
-        </tbody>
-    </table>
-</div>
-  
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-{% endblock%}
+{% endblock %}

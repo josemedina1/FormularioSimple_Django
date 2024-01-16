@@ -1,46 +1,120 @@
-form{
-    border: 1px solid #ddd; /* Delineado suave */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 70%;
-    border-radius: 10px;  
-    padding: 10px;
-}
-
-.inputform{
-    border: 1px solid #ccc;
-    padding: 5px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.data{
+/*Contenedor de form y tabla*/
+.data {
     display: flex;
     justify-content: space-evenly;
     height: 90%;
     margin-top: 5%;
 }
 
-.overflow-auto{
-    border: 1px solid #ddd; /* Delineado suave */
+/* Formulario / form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 70%;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+form label {
+    position: relative;
+}
+
+form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+form label .input+span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+form label .input:placeholder-shown+span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+form label .input:focus+span,
+form label .input:valid+span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+form label .input:valid+span {
+    color: green;
+}
+
+@keyframes pulse {
+    from{
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    margin: 5%;
+  }
+  
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+
+/* Seccion tabla con datos*/
+.overflow-auto {
+    border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 50%;
-    width: 50%;  
-    border-radius: 10px;  
+    width: 50%;
+    border-radius: 10px;
 }
 
 .table-container {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-
 }
 
-.table-container th, .table-container td {
+.table-container th,
+.table-container td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
 
-th{
+th {
     width: 30vw;
 }

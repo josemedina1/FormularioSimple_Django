@@ -6,8 +6,8 @@ class PersonaForm(forms.ModelForm):
         model = Persona
         fields = ['name', 'lastname', 'city', 'country']
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'inputform'}),
-            'lastname': forms.TextInput(attrs={'class': 'inputform'}),
-            'city': forms.TextInput(attrs={'class': 'inputform'}),
-            'country': forms.TextInput(attrs={'class': 'inputform'}),
+            'name': forms.TextInput(attrs={'class': 'input'}),
+            'lastname': forms.TextInput(attrs={'class': 'input'}),
+            'city': forms.TextInput(attrs={'class': 'input'}),
+            'country': forms.TextInput(attrs={'class': 'input'}),
         }
