@@ -6,10 +6,6 @@ main{
     align-items: center;
 }
 
-nav{
-    border: 2px solid red;
-}
-
 ul{
     background-image: url(https://img.freepik.com/vector-gratis/fondo-abstracto-geometrico-mosaico_1055-3074.jpg);
     border-radius: 10%;

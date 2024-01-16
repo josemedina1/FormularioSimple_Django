@@ -1,0 +1,36 @@
+.data{
+    display: flex;
+    justify-content: space-evenly;
+    height: 90%;
+    margin-top: 5%;
+}
+
+.overflow-auto{
+    border: 2px solid red;
+    height: 50%;
+    width: 50%;    
+}
+
+.inputform{
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.table-container {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th{
+    width: 30vw;
+}

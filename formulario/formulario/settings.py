@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'formconnect',
+    'crud',
 ]
 
 MIDDLEWARE = [
@@ -119,7 +119,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS =[
-    BASE_DIR / 'formconnect/static',
+    BASE_DIR / 'crud/static',
     '/var/www/static',
 ]
 
