@@ -109,7 +109,7 @@ evitar la creacion de otros campos mediante hacking.
 
 Al crear el template **index.html** se crea una funcion para renderizar este archivo,
 dentro de esta funcion se crea la logica para enviar los datos mediante el formulario y consumir sus datos
-para ser mostrados mediante una tabla.
+para ser mostrados mediante una tabla, todo esto se crea en el archivo **views.py**.
 
 <img src="formulario/documents/img/viewspy.png" alt="">
 
