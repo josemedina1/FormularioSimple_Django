@@ -41,6 +41,8 @@ mkdir -p /var/www/static
 # Crear APP
 Se debe crear la aplicacion que contendrá el modelo de la base de datos
 y donde se consumirá la base de datos mediante funciones y templates.
+Esta app se debe incluir dentro de las aplicaciones en el archivo **settings.py**,
+luego se incluye dentro de las urls principales **urls.py** mediante **include**.
 Utilizando el siguiente comando se crea la app, en este caso la app se llama CRUD:
 
 ```
@@ -48,6 +50,7 @@ Utilizando el siguiente comando se crea la app, en este caso la app se llama CRU
 ```
 
 <img src="formulario/documents/img/agregar_app.png" alt="">
+<img src="formulario/documents/img/urlspy.png" alt="">
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
@@ -99,5 +102,15 @@ evitar la creacion de otros campos mediante hacking.
 
 <img src="formulario/documents/img/form.png" alt="">
 <img src="formulario/documents/img/adminpy.png" alt="">
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+# Envio de datos y consumo de BD
+
+Al crear el template **index.html** se crea una funcion para renderizar este archivo,
+dentro de esta funcion se crea la logica para enviar los datos mediante el formulario y consumir sus datos
+para ser mostrados mediante una tabla.
+
+<img src="formulario/documents/img/viewspy.png" alt="">
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
