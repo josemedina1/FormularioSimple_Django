@@ -18,7 +18,7 @@ py manage.py runserver
 
 # Configuracion STATIC
 
-Dentro del archivo **setings.py** se debe identificar la ruta **STATICFILES_DIRS**,
+Dentro del archivo **settings.py** se debe identificar la ruta **STATICFILES_DIRS**,
  se debe incluir las siguientes rutas de carga para nuestros archivos estaticos. 
 
 ```
@@ -47,6 +47,24 @@ Utilizando el siguiente comando se crea la app, en este caso la app se llama CRU
     django-admin startapp crud
 ```
 
+<img src="formulario/documents/img/agregar_app.png" alt="">
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+# Templates
+Se crea una carpeta llamada **templates** donde se guardaran los archivos HTML,
+Estos templates se deben agregar a la configuracion dentro del archivo **settings.py**.
+
+Dentro de **templates** se encuentran **layouts** y **slices**
+donde se maneja una modulacion del archivo **base.html**, el cual contiene las secciones
+que se repiten en cada html (**navbar** y **footer**).
+
+En el archivo **base.html** se declaran bloques que serán utilizafos en los demas html
+para no contener todo el codigo en el archivo **index.html**
+
+<img src="formulario/documents/img/configuracion_templates.png" alt="">
+<img src="formulario/documents/img/templates.png" alt="">
+
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 # Crear BD 
@@ -66,5 +84,20 @@ la base de datos utilizando los siguientes comandos:
 ```
 
 <img src="formulario/documents/img/models.py.png" alt="">
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+# Crear Formulario
+
+Se crea un archivo llamado **forms.py** donde se crea el formulario que hará envio
+de los datos del formulario hacia la base de datos, esto se crea mediante el modelo creado anteriormente.
+Al crear los campos se pueden declarar las clases de cada input.
+
+Al crear el formulario se declaran los campos accesibles del modelo de base de datos
+para ser guardados y registrados, esto es para evitar el acceso a campos adicionales o
+evitar la creacion de otros campos mediante hacking.
+
+<img src="formulario/documents/img/form.png" alt="">
+<img src="formulario/documents/img/adminpy.png" alt="">
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
