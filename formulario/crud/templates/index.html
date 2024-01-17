@@ -5,15 +5,16 @@
 {% load static %}
 {# Hoja de estilos para este template #}
 {% block style %}
-  <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
 {% endblock %}
 
 {# Contenido de formulario #}
 {% block content %}
   <!-- Contenedor form y tabla -->
   <div class="container-fluid data">
-    <!-- Formulario -->
-    <form method="POST" action="{% url 'index' %}" novalidate>
+    <!-- Formulario sin auto completado y sin validacion por default -->
+    <form id="form" method="POST" action="{% url 'index' %}" autocomplete="off" novalidate>
+      <h1>Form</h1>
       {% csrf_token %}
       <div class="flex">
         <!-- Name / Nombre -->
@@ -41,29 +42,32 @@
     </form>
 
     <!-- Contenedor tabla -->
-    <div class="overflow-auto">
-      <div class="table-container">
-        <table>
+    <div class="table-container">
+      <table>
           <thead>
-            <tr>
-              <th>Name</th>
-              <th>Lastname</th>
-              <th>City</th>
-              <th>Country</th>
-            </tr>
+              <tr>
+                  <th>Name</th>
+                  <th>Lastname</th>
+                  <th>City</th>
+                  <th>Country</th>
+              </tr>
           </thead>
           <tbody>
-            {% for i in person %}
-              <tr>
-                <td>{{ i.name }}</td>
-                <td>{{ i.lastname }}</td>
-                <td>{{ i.city }}</td>
-                <td>{{ i.country }}</td>
-              </tr>
-            {% endfor %}
+              {% for i in person %}
+                  <tr>
+                      <td>{{ i.name }}</td>
+                      <td>{{ i.lastname }}</td>
+                      <td>{{ i.city }}</td>
+                      <td>{{ i.country }}</td>
+                  </tr>
+              {% endfor %}
           </tbody>
-        </table>
-      </div>
-    </div>
+      </table>
   </div>
+    
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
